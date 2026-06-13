@@ -10,6 +10,10 @@ function ProductCard(props) {
       <button onClick={props.addToCart}>
        Add To Cart
       </button>
+
+      <button onClick={props.removeFromCart}>
+       Remove
+      </button>
     </div>
   );
 }

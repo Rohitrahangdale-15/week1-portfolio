@@ -11,6 +11,12 @@ function App() {
     setCartCount(cartCount + 1);
   };
 
+  const removeFromCart = () => {
+  if(cartCount > 0){
+    setCartCount(cartCount - 1);
+  }
+  };
+
   return (
     <>
       <Header count={cartCount} />
@@ -18,11 +24,12 @@ function App() {
       <div className="products">
 
         <ProductCard
-          name="iPhone 15"
-          price="79999"
-          image="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9"
-          addToCart={addToCart}
-        />
+         name="iPhone 15"
+         price="79999"
+         image="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9"
+         addToCart={addToCart}
+         removeFromCart={removeFromCart}
+       />
 
         <ProductCard
           name="Samsung S24"
